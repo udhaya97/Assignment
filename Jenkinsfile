@@ -3,11 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                withAnt(ant : 'Ant')
-                {
-                  sh 'ant'
-                 
-                }
+                withEnv( ["ANT_HOME=${tool antVersion}"] ) {
+    sh '$ANT_HOME/bin/ant'
                  
             }
         }
