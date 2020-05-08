@@ -1,3 +1,4 @@
+def antVersion = 'Ant_1.10.7'
 pipeline {
     agent any 
     stages {
